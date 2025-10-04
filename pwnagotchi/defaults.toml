@@ -1,5 +1,5 @@
 [main]
-name = "pwnagotchi"
+name = "ControlAltElite"
 lang = "en"
 iface = "wlan0mon"
 mon_start_cmd = "/usr/bin/monstart"
@@ -7,9 +7,9 @@ mon_stop_cmd = "/usr/bin/monstop"
 mon_max_blind_epochs = 5
 no_restart = false
 whitelist = [
-    "EXAMPLE_NETWORK",
+    "BT-NFCPPM",
     "ANOTHER_EXAMPLE_NETWORK",
-    "fo:od:ba:be:fo:od",
+    "D48660479A98",
     "fo:od:ba"
 ]
 confd = "/etc/pwnagotchi/conf.d/"
@@ -27,7 +27,7 @@ custom_plugins = "/usr/local/share/pwnagotchi/custom-plugins/"
 enabled = true
 
 [main.plugins.auto_backup]
-enabled = false
+enabled = true
 interval = "daily"    # or "hourly", or a number (minutes)
 max_tries = 0
 backup_location = "/home/pi/"
@@ -57,11 +57,11 @@ interval = 1
 token = "" # Create a personal access token (classic) with scope set to public_repo to use the GitHub API
 
 [main.plugins.bt-tether]
-enabled = false
-phone-name = "" # name as shown on the phone i.e. "Pwnagotchi's Phone"
-mac = ""
-phone = "" # android or ios
-ip = "" # optional, default : 192.168.44.2 if android or 172.20.10.2 if ios
+enabled = true
+phone-name = "iPhone" # name as shown on the phone i.e. "Pwnagotchi's Phone"
+mac = "A0:4E:CF:AC:88:17"
+phone = "ios" # android or ios
+ip = "172.20.10.2" # optional, default : 192.168.44.2 if android or 172.20.10.2 if ios
 dns = "8.8.8.8 1.1.1.1" # optional, default (google): "8.8.8.8 1.1.1.1". Consider using anonymous DNS like OpenNic :-)
 
 [main.plugins.fix_services]
@@ -190,7 +190,7 @@ throttle_a = 0.4
 throttle_d = 0.9
 
 [ui]
-invert = false # false = black background, true = white background
+invert = true # false = black background, true = white background
 cursor = true
 fps = 0.0
 
@@ -239,7 +239,7 @@ port = 8080
 on_frame = ""
 
 [ui.display]
-enabled = false
+enabled = true
 rotation = 180
 type = "waveshare_4"
 
